@@ -13,7 +13,7 @@ making websites.
  2. Creating folder for every view. (note: header & footer also should have there own custom folder)
  3.Controllers and Angular components should be kept int he app folder. 
  
- <img src="http://www.kamranmohsin.com/wp-content/uploads/2016/05/Untitled-2-1024x576.png"/>
+ <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/13124611_1723294447918215_7797839680755283543_n.png?oh=053ce184f5bc77927ffecedb00540614&oe=57ABD1B0"/>
  
  #Update
  
