@@ -1,0 +1,81 @@
+/* The starting CSS styles for the enter animation */
+main.ng-enter {
+  transition:0.3s linear all;
+  opacity:0;
+  transform: translateX(20px);
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity:1;
+    transform: translateY(0);
+}
+
+
+td tr.ng-enter{
+	transition: 0.9s linear all;
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+td tr.ng-enter.ng-enter-active{
+	opacity: 1;
+	transform: translateY(0);
+
+}
+
+
+
+/* Custom edit */
+a{
+	text-decoration: none;
+}
+/*Lower footer added from old site */
+@font-face {
+font-family: 'Steinerlight';
+  src: url('../fonts/Steinerlight.ttf');
+}
+
+#user-bar {
+  position: fixed;
+  bottom: 0;
+  height: 15px;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 1em;
+}
+
+.user-bar-text-left{
+	float: left;
+	font-family: Steinerlight;
+	position: relative;
+	right: 13px;
+}
+.user-bar-text-right{
+    float: right;
+    font-family: Steinerlight;
+    position: relative;
+    right: 19px;
+}
+
+@media 
+
+.user-bar.affix-top, .user-bar.affix-bottom {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.user-bar.affix {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+

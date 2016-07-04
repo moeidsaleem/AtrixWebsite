@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Step by step register form</title>
+    <script type="text/javascript" src="view/register/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="view/register/css/bootstrap.css"/>
+    <script type="text/javascript" src="view/register/js/angular.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="view/register/css/reset.css">
+
+    
+        <link rel="stylesheet" href="view/register/css/style.css">
+<script>
+$(document).ready(function() {
+
+$('.username').keypress(function (e) {
+     if (e.which === 13) {
+         e.preventDefault();
+         var index = $('#username').index(this) + 1;
+         $('.username').eq(index).focus();
+     }
+ });
+  
+
+});
+</script>
+    
+    
+    
+  </head>
+
+  <body>
+
+    
+<h1>Step by step form</h1>
+<h2>JavaScript Magic - Atrix Digital©</h2>
+<form action="view/register/main.php" method="POST">
+  <ul class="items"></ul>
+  <fieldset class="username enable">
+    <div class="icon left"><i class="user"></i></div>
+    <input type="text" name="username" placeholder="Username" id="username" required />
+    <div class="icon right button"><i class="arrow"></i></div>
+  </fieldset>
+  <fieldset class="email">
+    <div class="icon left"><i class="letter"></i></div>
+    <input type="mail" name="email" placeholder="Email"  id="username" required />
+    <div class="icon right button"><i class="arrow"></i></div>
+  </fieldset>
+  <fieldset class="password">
+    <div class="icon left"><i class="lock"></i></div>
+    <input type="password" name="password" placeholder="Password"  id="username" required />
+    <div class="icon right button"><i class="arrow"></i></div>
+  </fieldset>
+  <fieldset class="thanks">
+    <div class="icon left"><i class="heart"></i></div>
+    <p><button type="submit" class="btn btn-primary">ok</button></p>
+    <div class="icon right"><i class="heart"></i></div>
+  </fieldset>
+
+</form>
+<div id="form_output">
+    
+        <script src="view/register/js/index.js"></script>
+
+   
+    
+    
+  </body>
+</html>
