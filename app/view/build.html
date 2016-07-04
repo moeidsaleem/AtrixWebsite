@@ -1,0 +1,133 @@
+
+<div layout="row" layout-align="center">
+<img src="content/img/software-development-banner.png" width="1600px" height="400px">
+
+</div>
+
+<md-whiteframe class="md-whiteframe-z3" layout layout-align="center center">
+  
+<h1 style="font-family:steinerlight;" class="image-hover"> what do you want us to build ? </h1>
+</md-whiteframe>
+
+<br>
+<br>
+<br>
+<form novalidate class="simple-form" >
+<div   layout="row" layout-xs="column" layout-align="center center" style="font-size:20px;">
+<span flex ng-repeat="item in items" layout layout-align="center">
+<md-checkbox
+    ng-checked="exists(item.names, selected)"
+    ng-click="toggle(item.names, selected)" 
+    class="md-whiteframe-z4 image-hover img-shadow-1">
+	{{item.names}}
+	 <span ng-if="exists(item.names, selected)"> &#10003;</span>
+
+</md-checkbox>
+</span>
+</div>
+
+  
+<div layout="row" layout-align="center" ng-show="showweb(selected)" >
+<span flex ng-repeat="i in webadvance" layout layout-align="center">
+<md-checkbox
+    ng-checked="exists(i.names, val)"
+    ng-click="toggle(i.names, val)" 
+    class="md-whiteframe-z4 image-hover img-shadow-1">
+  {{i.names}}
+   <span ng-if="exists(i.names, val)"> &#10003;</span>
+
+</md-checkbox>
+</div>
+
+   
+
+<div layout="row" layout-align="center">
+<md-input-container style="width:30%;text-align:center;">
+<label>Enter your Company Name</label>
+	<input type="text" ng-model="build.company" style="width:100%;">
+</md-input-container>
+</div>
+<div layout="row" layout-align="center">
+<md-input-container style="width:30%;text-align:center;">
+<label>Enter Contact Number</label>
+	<input type="number" ng-model="build.contact" style="width:100%;">
+</md-input-container>
+
+<md-input-container style="width:30%;text-align:center;">
+<label>Enter Email address</label>
+	<input type="email" ng-model="build.email" style="width:100%;">
+</md-input-container>
+</div>
+
+<div  layout="row" layout-align="center" >
+<h1 style="font-family:steinerlight;" class="md-whiteframe-z4 image-hover img-shadow-1"> Your Company Category? </h1>
+</div>
+<div layout="row" layout-align="center center">
+<md-select ng-model="build.type" placeholder="Select Company Type" style="text-align:center;width:50%;" > <!--md-on-close: expression; multiple:boolean; placeholder: string;-->
+  <md-select-label>Select your Company Type </md-select-label>
+  <md-option ng-value="opt" ng-repeat="opt in options" >{{ opt.type }}</md-option>
+</md-select>
+</div>
+
+<div style="text-align:center;position:center;display:block;">
+  <md-slider-container>
+      <span class="image-hover">Set your Budget <i class="fa fa-money"/> 
+
+ {{build.budget| currency}}  <span>   == PKR.{{build.budget*100 }} <span ng-bind="bud()"> </span></span></span>
+ <div layout layout-align="center">
+   <div flex="33"> </div>
+  <div flex="66">
+      <md-slider flex min="100" max="1000"  step="50" ng-model="build.budget" aria-label="red" id="red-slider" c>  
+      </md-slider>  <md-checkbox md-no-ink ng-true-value="200" ng-false-value="0" ng-model="build.budget" name="string"  ng-disabled="boolean" aria-label="string">
+       Small Budget(20k-)
+      </md-checkbox> <md-checkbox md-no-ink ng-true-value="500" ng-false-value="0" ng-model="build.budget" name="string"  ng-disabled="boolean" aria-label="string">
+       business Budget(50k+)
+      </md-checkbox> <md-checkbox md-no-ink ng-true-value="1000" ng-false-value="0" ng-model="build.budget" name="string"  ng-disabled="boolean" aria-label="string">
+       Enterprise Budget (100k+)
+      </md-checkbox></div>
+     <div flex="33"> </div>
+     </div>
+    </md-slider-container>
+ 
+<div layout="row" layout-align="center" style="text-align:center;position:center;">
+  <md-input-container class="md-block" flex-gt-sm style="text-align:center;position:center;">
+          <label >More Details</label>
+          <input md-maxlength="300" required name="name" ng-model="build.idea" />
+          <div class="hint" ng-if="showHints">Tell us what exactly is in your mind!</div>
+          <div ng-messages="build.idea.$error" ng-if="!showHints">
+            <div ng-message="required">Name is required.</div>
+            <div ng-message="md-maxlength">The name has to be less than 300 characters long.</div>
+          </div>
+        </md-input-container>
+ </div>
+</div>
+<div layout layout-align="center" style="" >
+<md-button style="font-size:50px;font-family:roboto;border:4px;padding:20px; background-color:#69F0AE;border-style:dotted;" class="md-whiteframe-z4 image-hover img-shadow-1" ng-click="showConfirm($event)" ng-model="buildbutton" ng-hide="buildval" type="submit"> Confirm</md-button>
+<h1 style="color:{{colormsg}};">{{status}} </h1>
+
+</div>
+</form>
+
+<!-- bottom Details -->
+<div style="position:relative; top:20px">
+<div style="position:fixed; bottom:0;   background-color: #ffffff;
+    opacity: .4;">
+<p>
+<div layout  layout-hide-xs>
+<md-subheader> 
+Company name: <span style="color:red">{{build.company}} </span>
+company type:  <span style="border:30px;color:red;"> {{build.type.type}}</span> 
+ Phone Number: <span style="color:blue">{{build.contact}} </span>
+  Email: <span style="color:green;"> {{build.email}} </span> 
+   <md-chips  style="font-size:2px;">
+   <md-chip style="font-size:10px;" ng-repeat="x in selected"> {{x }} </md-chip> </md-chips> </span>
+</md-subheader> 
+</div>
+</p>
+
+<p>
+<code> Please fill in the form </code></p>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,155 @@
+<section ng-controller="jobsCtrl">
+<div layout="column">
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Job Portal">
+        <md-content class="md-padding" >
+            <center>
+             <md-whiteframe class="md-whiteframe-z2" layout layout-align="center"> 
+             <h1 style="font-family: steinerlight;">Job Portal<md-subheader>Find job from all across the world.</md-subheader> </h1> </center>
+             </md-whiteframe>
+      <div layout="row" layout-align="center center center" layout-wrap>
+           <div flex>
+            <h2>Title</h2> </div>
+            <div flex>
+            <h2>Career</h2> </div>
+             <div flex> 
+            <h2>salary</h2> </div>
+            <div flex>
+            <h3>Skills</h3> </div>
+            <div flex>
+            <h2>Location</h2> </div>
+            <div flex>
+            <h2>Company</h2> </div>
+          </div>
+  <div layout="row">
+  <div flex flex-order="-1">
+    <p>{{v.jobTitle}}</p>
+  </div>
+  <div flex flex-order="1" flex-order-gt-md="3">
+    <p hide-gt-md>{{v.careerLevel}}</p>
+    <p hide show-gt-md>{{v.salary}}</p>
+  </div>
+
+  <div flex flex-order="2">
+    <p>{{v.skills}}</p>
+  </div>
+  <div flex flex-order="3" flex-order-gt-md="1">
+    <p hide-gt-md>{{v.location}}</p>
+    <p hide show-gt-md>{{v.company}}</p>
+  </div>
+</div>
+           <div layout="row" layout-align="center center center" ng-repeat="v in job" layout-wrap>
+           <div flex>
+            <p>{{v.jobTitle}}</p> </div>
+            <div flex>
+            <p>{{v.careerLevel}}</p> </div>
+             <div flex>
+            <p>{{v.salary}}</p> </div>
+            <div flex>
+            <p style="text-align: center;"><code>{{v.skills}}</code></p> </div>
+            <div flex>
+            <p>{{v.location}}</p> </div>
+            <div flex>
+            <p>{{v.company}}</p> </div>
+          </div>
+          <hr />
+
+
+      
+        </md-content>
+        </md-tab>
+        <md-tab label="latest Job">
+        
+
+
+        <md-content class="md-padding">
+
+          <center><md-whiteframe class="md-whiteframe-z1" layout layout-align="center">
+  
+<h1 style="font-family: steinerlight;">Job Opening </h1> </center>
+<br>
+<div layout="row">
+
+<md-card>
+  <img class="md-card-image" src="content/img/angularjs.jpg" alt="image caption">
+  <md-card-content>
+    <h2>Web Developer</h2>
+    <p>a dedicated web developer who has knowledge of Angular js, nodejs and have worked with Nginx server. knows how to manage git.</p>
+    <p><b>Skills</b> <code>AngularJS</code>, <code>JavaScript</code> <code>NodeJS</code> <code>Nginx</code></p>
+
+  </md-card-content>
+  <md-card-footer>
+
+<md-input-container>
+  <label>Email</label>
+  <input type="text" ng-model="user.email">
+</md-input-container><md-input-container>
+  <label>Phone</label>
+  <input type="number" ng-model="user.number">
+</md-input-container> 
+<md-input-container>
+  <label>Upload CV</label>
+  <input type="text" ng-model="user.file">
+</md-input-container> </md-card-footer>
+  <div class="md-actions" layout="row|column" layout-align="start|end|center start|end|center">
+     <md-button>content</md-button>
+   </div>
+</md-card>
+<md-card>
+  <img class="md-card-image" src="content/img/game.png" alt="image caption">
+  <md-card-content>
+    <h2>Unity game developer</h2>
+    <p>a dedicated web developer who has knowledge of Angular js, nodejs and have worked with Nginx server. knows how to manage git.</p>
+  </md-card-content>
+  <md-card-footer>
+  Card footer
+  </md-card-footer>
+  <div class="md-actions" layout="row|column" layout-align="start|end|center start|end|center">
+     <md-button>content</md-button>
+   </div>
+</md-card>
+<md-card>
+  <img class="md-card-image" src="content/img/graphic_course.png" alt="image caption">
+  <md-card-content>
+    <h2>Graphic Designer</h2>
+    <p>a dedicated web developer who has knowledge of Angular js, nodejs and have worked with Nginx server. knows how to manage git.</p>
+  </md-card-content>
+  <md-card-footer>
+  Card footer
+  </md-card-footer>
+  <div class="md-actions" layout="row|column" layout-align="start|end|center start|end|center">
+     <md-button>content</md-button>
+   </div>
+</md-card>
+</div> 
+        </md-content>
+      </md-tab>
+      <md-tab label="Internship">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Internship<md-subheader class="md-display">Internship at Atrix digital. Start your Professional career!  </md-subheader> </h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+<!-- md card bottom -->
+<div class="row" layout-align="center center">
+<md-card  layout-align="center center">
+  <img class="md-card-image" src="content/img/career.gif" alt="image caption" >
+  <md-card-content layout-align="center">
+    <h2 style="font-family: steinerlight;">Finding the perfect job</h2>
+    <p>Concerned about finding the perfect job. Let us do the hard work and look for the perfect job for you. Are you looking for Projects and 
+    you got that one skills that you are really good at. May be we are looking for that skills. Just fill in the form below, your concerns and priorities and let us find the best place for you to work or remote project.</p>
+  </md-card-content>
+  <md-card-footer>
+  Card footer
+  </md-card-footer>
+  <div class="md-actions" layout="row|column" layout-align="start|end|center start|end|center">
+     <md-button>content</md-button>
+   </div>
+</md-card>
+  
+</section>
+

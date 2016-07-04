@@ -1,0 +1,120 @@
+<section >	
+
+ <!--
+<md-card>
+ 
+
+  <md-list-item class="md-2-line" ng-repeat="record in myData">
+    <md-input-container>
+    	<label>Name of Product</label>
+    	<input type="text" ng-model="record.name" ng-change="myData.$save(record)"/>
+    </md-input-container>
+    <md-input-container>
+    <label>Image Link</label>
+    <input type="text" ng-model="record.imglink" ng-change="myData.$save(record)" init="content/img/" />
+    </md-input-container>
+    <md-input-container>
+    <label>Price</label>
+    <input type="text" ng-model="record.price" ng-change="myData.$save(record)"/>
+    </md-input-container>
+       </md-input-container>
+    <md-input-container>
+    <label>category</label>
+    <input type="textarea" ng-model="record.category" ng-change="myData.$save(record)"/>
+    </md-input-container>
+     <md-input-container>
+    <label>type</label>
+    <input type="textarea" ng-model="record.type" ng-change="myData.$save(record)"/>
+    </md-input-container>
+     <md-input-container>
+    <label>description</label>
+    <input type="textarea" ng-model="record.description" ng-change="myData.$save(record)"/>
+    </md-input-container>
+     <md-input-container>
+    <label>tags</label>
+    <input type="textarea" ng-model="record.tags" ng-change="myData.$save(record)"/>
+    </md-input-container>
+    <md-button class="md-raised"  ng-click="myData.$remove(record)">Delete Record </md-button>
+  </md-list-item>
+
+</md-list>
+   
+    <!-- push a new message onto the array 
+    <form ng-submit="addData()">
+               <md-input-container>
+                   <label>Add new Product title</label>
+                <input type="textarea" ng-model="newMessageText" />
+                </md-input-container>
+      <button type="submit">Add new product</button> 
+    </form>  
+   
+-->
+<!-- working code -->
+<div layout="row" layout-align="center" layout-xs="column">
+  <h2 class="md-display-3" style="font-family: steinerlight;">Products
+  <p class="md-subheader" style="text-align: center;">| Core - Industrial Specific - Business |</p>
+  </h2>
+  </div>
+
+  <div style="text-align:center;background-color:white;box-shadow:10px 10px 5px #888888;"> <md-input-container>
+   <label>Search Anything</label>
+    <input type="text" ng-model="test">
+  </md-input-container>
+
+
+
+  <p flex>Selected Category: <span class="radioValue">{{ tags }}</span> </p>
+
+
+
+    <md-radio-group ng-model="tags">
+
+  <div layout="row"> 
+     <md-checkbox   ng-model="tags"  ng-false-value="" ng-disabled="boolean"   ng-true-value="'business'" ng-false-value="''"  flex="10">Business</md-checkbox>
+     <md-checkbox  ng-true-value="'project'" ng-false-value="''" ng-model="tags" name="string"  ng-disabled="boolean" aria-label="string"> project </md-checkbox>
+
+      <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'restaurant'" ng-false-value="''"  flex="10">restaurant</md-checkbox>
+      <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'learning'" ng-false-value="''"  flex="10">learning</md-checkbox>
+     <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'health'" ng-false-value="''"  flex="10">health</md-checkbox>
+     <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'travel'" ng-false-value="''"  flex="10">travel</md-checkbox>
+     <md-checkbox ng-model="tags"   ng-disabled="boolean" ng-true-value="'booking'" ng-false-value="''"  flex="10">booking</md-checkbox>
+      <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'email'" ng-false-value="''"  flex="10">email</md-checkbox>
+      <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'real estate'" ng-false-value="''"  flex="10">real estate</md-checkbox>
+      <md-checkbox ng-model="tags"  ng-disabled="boolean" ng-true-value="'media'" ng-false-value="''"  flex="10">media</md-checkbox>
+
+
+  </div>
+  <hr>
+  </div>
+<md-whiteframe class="md-whiteframe-z1"  >
+  <div  layout="row" layout-xs="column" layout-wrap style="background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/tiny_grid.png);">
+  <div flex="33" class="animate-repeat" flex-xs="100"  ng-repeat="x in myData | filter:test| filter:tags " flex="20" >
+   <md-card>
+      <img class="md-card-image" id="img-card" src="{{x.imglink}}" alt="image caption" id="flexy" >
+      <md-card-content layout-algin="center">
+        <h2 class="heading">{{x.name}} </h2>
+        <p>{{x.description}}</p>
+      </md-card-content>
+      <md-card-footer style="text-align: center;"> 
+<code> {{x.tags}}<br>{{x.price | currency }}     </code> </md-card-footer>
+      <div class="md-actions" layout="row|column" layout-align="center center">
+         <md-button class="md-accent center" style="text-align: center;"> Find out more</md-button>
+       </div>
+    </md-card> </div>
+    
+   
+   
+</div>
+
+
+
+
+
+
+
+
+
+
+</md-card>
+
+</div>

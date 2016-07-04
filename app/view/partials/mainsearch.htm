@@ -1,0 +1,75 @@
+
+<section ng-controller="SelectAsyncController">
+<div layout="row" layout-align="center center">
+<md-input-container>
+  <label>Company name</label>
+  <input type="text" ng-model="company.name">
+</md-input-container>
+<md-input-container>
+  <label>Business location</label>
+  <input type="text" ng-model="company.location">
+</md-input-container>
+
+<md-input-container>
+  <label>Email</label>
+  <input type="text" ng-model="company.email">
+</md-input-container>
+ <div layout>
+      <div flex="10" layout layout-align="center center">
+        <span class="md-body-1">R</span>
+      </div>
+      <style>
+.sliderdemoBasicUsage input[type="number"] {
+  text-align: center;
+  padding-left: 10px; }</style>
+      <md-slider flex min="0" max="255" step="2" ng-model="color.red" aria-label="red" id="red-slider" class>
+      </md-slider>
+      <div flex="20" layout layout-align="center center">
+        <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+      </div>
+    </div>
+    <div layout>
+      <div flex="10" layout layout-align="center center">
+        <span class="md-body-1">G</span>
+      </div>
+      </d iv>
+<div  layout="column" layout-align="center center" style="padding:40px" ng-cloak>
+  <p>Select your company type , Specific industry that your business belongs too i.e. travel, automobile, health, etc:</p>
+  <div layout="column" layout-align="center center">
+    <md-select placeholder="Company category" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
+      <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+    </md-select>
+    <p class="md-caption">Your Company "{{company.name ? company.name : 'Not entered'}}" type is: {{ user ? user.name : 'Not selected' }}</p> 
+    <p class="md-caption">Details: <span style="color:red;"> Phone: "{{company.phone ? company.phone : 'Not entered'}}" 
+    email is: {{ company.email ? company.email : 'Not selected' }} <span style="color:{{location.colors}};">Location: {{company.location}}</span><span style="color:{{ city.colors}};"> City: {{company.city}}</span></p>    
+  </div>
+</div>
+ 
+
+ <div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
+  <div>
+          <md-button ng-click="toggleRight()" ng-hide="isOpenRight()" class="md-primary" style="position: fixed;">
+            Toggle right
+          </md-button>
+        </div>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+      </md-toolbar>
+      <md-content ng-controller="RightCtrl" layout-padding>
+        <form>
+          <md-input-container>
+            <label for="testInput">Test input</label>
+            <input type="text" id="testInput"
+                   ng-model="data" md-autofocus>
+          </md-input-container>
+        </form>
+        <md-button ng-click="close()" class="md-primary">
+          Close Sidenav Right
+        </md-button>
+      </md-content>
+    </md-sidenav>
+
+</div>
+
+</section>

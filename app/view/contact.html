@@ -1,0 +1,237 @@
+<style>
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,400,300italic,300,400italic,100,100italic);
+
+
+
+
+form {
+  width: 30%;
+  height: 100%;
+  background: #f1f1f1;
+  margin: 5% 33%;
+  padding: 2%;
+ 
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: block;
+  margin-top: 2em;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#logo {
+  font-size: 50px;
+  text-align: center;
+  color: #4889f0;
+}
+
+form input, textarea {
+   border-radius: 2px;
+  width: 90%;
+display: block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  border: 1px solid #eceff1;
+  padding: 15px;
+  z-index: 1;
+position: relative;
+  -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+background: #fff;
+border: 1px solid #d9d9d9;
+border-top: 1px solid #c0c0c0;
+}
+
+[type="submit"] {
+  border: 1px solid #2f5bb7;
+color: #fff;
+ padding: 10px;
+text-shadow: 0 1px rgba(0,0,0,0.3);
+background-color: #fece1a;
+background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+[type="submit"]:hover {
+border-color: #c6c6c6;
+color: #fff;
+cursor: pointer;
+-o-transition: all 0.2s;
+-moz-transition: all 0.3s;
+-webkit-transition: all 0.2s;
+transition: all 0.2s;
+background-color: #4c8ffc;
+background-image: -webkit-linear-gradient(top,#4c8ffc,#4889f0);
+background-image: -moz-linear-gradient(top,#4c8ffc,#4889f0);
+background-image: -ms-linear-gradient(top,#4c8ffc,#4889f0);
+background-image: -o-linear-gradient(top,#4c8ffc,#4889f0);
+background-image: linear-gradient(top,#4c8ffc,#4889f0);
+-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+
+  
+footer {
+  text-align: center;
+  margin-top: -20px;
+  
+  p {
+    color: #3895dd;
+    padding-bottom: -5px;
+    font-size: 16px;
+  }
+  
+  a {
+    border-bottom: 1px dashed #363636;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+}
+
+.checkbox {
+  padding: 8px;
+  margin-top: 8px;
+}
+
+
+.human_veryfication {
+  float: left;
+  margin-left: -60px;
+  margin-top: 5px;
+}
+
+lable {
+  margin-left: -180px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  form {
+    left: 3%;
+    margin-right: 3%;
+    width: 88%;
+    margin-left: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+#contactpage{
+  padding-top: 30px;
+}
+
+ #icolg{
+  font-size:100px;
+  text-align: center;
+  color:black;
+  background-color:white;
+  padding: 12px;
+  border-radius: 60px;
+ }
+ #icolg:hover{
+  font-size:100px;
+  text-align: center;
+  color:white;
+  background-color: #fece1a;
+  padding: 22px;
+  border-radius: 70px;
+ }
+
+  &.fa-github {
+    color: @fa-github;
+  }
+
+  @fa-slack: #0f7965;
+    &.fa-slack {
+    color: @fa-slack;
+  }
+ </style>
+
+<section id="contactpage" style="background-image:url('content/img/back-matrix.jpg');">
+<form action="">
+  <h1>Contact Us!</h1>
+<p>Say Hello! Or whatever you want!</p>
+  <div id="logo" class="icon-ic-drafts-24px"></div>
+  <input name="name" type="text"
+placeholder="Name" id="name" required/>
+  
+  <input name="email" type="email"
+placeholder="Email" id="email" required/>
+  
+  <textarea name="text" placeholder="Message"></textarea>
+  
+  <div class="checkbox"> <lable><input type="checkbox" class="human_veryfication" />Yes, I'm Human!</lable></div>
+ 
+   <input type="submit" value="Send" id="button-blue"/>
+</form>
+
+</section>
+
+<!-- social links -->
+<hr>
+<<h1 class="heading"> Social links </h1>
+<div layout="row" layout-align="center center">
+<span flex="10"></span>
+<a href="http://facebook.com"> 
+ <div flex="25" > <i class="fa fa-facebook-official" aria-hidden="true" id="icolg"  style="color:#3B5998;"> </i>
+ </a></div>
+<a href="https://twitter.com">
+<div flex="25">  <i class="fa fa-twitter-square tw" id="icolg"  style="color:#7ec3ed;" > </i></a></div>
+<a href="https://googleplus.com">
+<div flex="25" > <i class="fa fa-google-plus" id="icolg" style="color:#DB4437" >    </i></a></div>
+<a href="https://atrixdigital.com">
+<div flex="25">  <i class="fa fa-globe " id="icolg" style=" color: #0f7965;" >    </i> </a></div>
+<a href="https://atrixdigital.slack.com/">
+<div flex="25">  <img src="content/img/favicon/Slack.ico" id="icolg" style="width:100px;height:100px;" /> </a> </div>
+
+<div flex="25">  <i class="fa fa-github" id="icolg"  style="color:#333;">          </i></div>
+    <span flex="10"></span>
+</div>
+<br><br>
+<hr>
+
+<!-- Address -->
+<h1 class="heading"> Main office Address </h1> 
+  <h3 class="heading">Office no. F-7,  1st Floor,  Rizwan Arcade, Saddar, Rawalpindi</h3> 
+  <h3 class="heading">Timing :    <b>  9:00 AM - 11:30 PM </b> </h3>
+  <div layout layout-align="center center">
+<div style="overflow:hidden;width:900px;height:500px;resize:none;max-width:100%;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="20px" src="https://www.google.com/maps/embed/v1/place?q=Pizza+Hut,+Adamjee+Road,+Saddar,+Rawalpindi,+Punjab,+Pakistan&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="embedded-map-html" href="https://www.interserver-coupons.com" id="grab-map-authorization">click here</a><style>#google-maps-display .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=4eb4ef8d-8d0d-045f-a8c7-e3c00a916313&c=embedded-map-html&u=1467053596" defer="defer" async="async"></script>
+</div> <br> <br>
+<hr>
+
+<!-- Phone Numbers -->
+
+<h1 class="heading"> Contact details </h1>
+<br>
+<h2 class="heading">Moeid Saleem khan - <span> Team leader / CEO </span> <img src="content/img/logo.png" width="30px" height="30px"> </h2>
+<h1 class="heading" > +92 333 1950 718 </h1>
+<p class="heading"> Contact us at  whatsapp  <i class="fa fa-whatsapp"> </i> .  </p>
+</div>
+
+
+
+<link href="https://fontastic.s3.amazonaws.com/qXDGBpBG6AawYwtmYPpQBb/icons.css" rel="stylesheet">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
